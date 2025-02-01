@@ -1,9 +1,7 @@
 # dotfiles
 ## Dependencies
-* https://github.com/sharkdp/bat
-* https://github.com/junegunn/fzf
 
-## Add to ~/.bashrc
+## Add/Edit powershell profile
 ```
-[ -f ~/.dotfiles/.bashrc ] && source ~/.dotfiles/.bashrc
+if (-not (Test-Path $PROFILE)) { New-Item -Path $PROFILE -ItemType File -Force }; notepad $PROFILE
 ```
